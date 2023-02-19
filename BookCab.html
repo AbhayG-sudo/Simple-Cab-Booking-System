@@ -1,0 +1,177 @@
+<?php
+require('NavigationCustomer.html');
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <style>
+
+    body{
+      background-image: url('images/taxi_cab_pic.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+
+input[type=text], input[type=password], input[type=date], input[type=time] {
+  width: 50%;
+  padding: 0.5%;
+  /*display: inline-block;*/
+  /*margin: 1%; */
+  border: 4px solid #ccc;
+  /*box-sizing: border-box;*/
+  }
+  /* Set a style for all buttons */
+  button {
+    background: linear-gradient(to right, #ff105f ,#ffad06);;
+    margin-top: .5em;
+    margin-right: 70px;
+    border: none;
+    width: 30%;
+    color: white;
+    font-weight: bold;
+    padding: .8em 0;
+    border-radius: 1.6em;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  /* Add a hover effect for buttons */
+
+  button[type=submit]:hover
+  {
+    background: linear-gradient(to LEFT, #ff0055 ,#ffaa00);;
+    
+  }
+
+  .submitbtn {
+
+    background: linear-gradient(to right, #ff105f ,#ffad06);;
+    margin-top: .5em;
+    margin-left: 70px;
+    border: none;
+    width: 30%;
+    color: white;
+    font-weight: bold;
+    padding: .8em 0;
+    border-radius: 1.6em;
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover
+  {
+    background: linear-gradient(to LEFT, #ff0055 ,#ffaa00);;
+    
+  }
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+  <h1><p style="color:white;font-size:45px;margin-left: 15%">Welcome to Vehicle Management Portal </p></h1> 
+
+
+  <div class="container-fluid"  style="background-image: url('images/download.jpg');
+  background-repeat: no-repeat;position:center;
+  background-size:600px 800px;margin-right:15%;margin-left:25%;margin-bottom: 5% ">
+
+
+  <form class="form-inline" action="BookCab.php" method="POST" style="margin-left: 4%" >
+
+    <div>
+      <img src="images/Gif_car.gif" alt=user width="160" height="150" style="margin-left:150px;padding:20px;border-radius: 50%;">
+    </div>
+
+    
+     <div class="row">
+       <div class="col">
+        <label for="email_id"><b>Username</b></label>
+      </div>
+      <div class="col">
+        <input type="text" placeholder="Enter Email" name="email_id" required>
+        <br/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="pickup"><b>Pick-up Location</b></label>
+      </div>
+      <div class="col">
+        <input type="text" placeholder="Enter pickup location" name="pickup" required><br/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+       <label for="drop"><b>Drop Location</b></label>
+     </div>
+     <div class="col">
+      <input type="text" placeholder="Enter Drop location" name="drop" required>
+    </div>
+  </div>
+  <div class="row">
+    <p><b>Journey(date and time)</b></p>
+  </div>
+  <div class="row">
+    <div class="col">
+     <label for="JourneydateF">To:</label>
+   </div>
+   <div class="col">
+    <input type="date" id="journeydateF" name="journeydateF" required><br>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <label for="JourneytimeF">To:</label>
+  </div>
+  <div class="col">
+    <input type="time" id="journeyTimeF" name="journeytimeF" required><br>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <label for="JourneydateT">From:</label>
+  </div>
+  <div class="col">
+    <input type="date" id="journeydateT" name="journeydateT" required><br>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <label for="JourneytimeT">From:</label>
+  </div>
+  <div class="col">
+    <input type="time" id="journeyTimeT" name="journeytimeT" required><br>
+  </div>
+
+</div> 
+<div class="row">     
+  <div class="col">
+    <p><b>Select vehicle type</b></p>
+  </div>
+  <div class="col">
+    <select id="cars" name="cars">
+      <option value="Hatchback">Hatchback</option>
+      <option value="Sedan">Sedan</option>
+      <option value="SUV">SUV</option>
+      <option value="MUV">MUV</option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <input type="submit"  name="submit" value="BOOK CAB" class="submitbtn">
+  <br><br>
+</div>
+
+
+</form>
+
+</div>
+
+
+
+</body>
+
+</html> 
